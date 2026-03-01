@@ -11,10 +11,12 @@ senha_usuario = input("Digite sua senha: ")
 # analisando criterios de segurança:
 
 if len(senha_usuario) >= 12:
-    pontuacao += 2
+    pontuacao = 4
 
 if len(senha_usuario) >= 8:
-    pontuacao += 2
+    pontuacao = 2
+else:
+    pontuacao = 0
 
 # caracteres maiusculos ( verifica se existe ao menos um:)
 if any(c.isupper() for c in senha_usuario):
